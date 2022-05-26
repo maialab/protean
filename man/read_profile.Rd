@@ -4,10 +4,14 @@
 \alias{read_profile}
 \title{Read a sequence profile}
 \usage{
-read_profile(file = stop("`file` must be specified"))
+read_profile(file = stop("`file` must be specified"), sort = TRUE)
 }
 \arguments{
 \item{file}{A path to a sequence profile file.}
+
+\item{sort}{Whether to sort the sequences by the variable
+\code{human_ortho_perc_id}, from highest (most similar to human) to lowest (most
+distant from human).}
 }
 \value{
 A \link[tibble:tibble-package]{tibble} of 10 variables:

@@ -1,6 +1,9 @@
 #' Read a sequence profile
 #'
 #' @param file A path to a sequence profile file.
+#' @param sort Whether to sort the sequences by the variable
+#'   `human_ortho_perc_id`, from highest (most similar to human) to lowest (most
+#'   distant from human).
 #'
 #' @return A [tibble][tibble::tibble-package] of 10 variables:
 #' \describe{
@@ -26,8 +29,10 @@
 #' @examples
 #' read_profile(profile_path("TP53"))
 #' @export
-read_profile <- function(file = stop('`file` must be specified')) {
+read_profile <- function(file = stop('`file` must be specified'), sort = TRUE) {
 
-  tibble::as_tibble(utils::read.csv(file = file))
+  tbl <- tibble::as_tibble(utils::read.csv(file = file))
+  tbl2 <- `if`(sort, dplyr::arrange(tbl, dplyr::desc(.data$human_ortho_perc_id)), tbl)
 
+  tbl2
 }
