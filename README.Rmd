@@ -1,0 +1,70 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# protean
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This package contains provides protein sequence profiles for OncoKB cancer
+genes.
+
+These sequence profiles can be useful to infer evolutionary variation at protein
+positions which in turn may be used as a proxy for inferring impact of
+mutations.
+
+## Installation
+
+You can install the development version of `{protean}` like so:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("maialab/protean")
+```
+
+## Usage
+
+To know the genes whose protein sequence profiles are provided use
+`exported_genes`:
+
+```{r}
+library(protean)
+
+# Number of protein sequence profiles available
+length(exported_genes)
+
+# Here's the first 10
+exported_genes[1:10]
+```
+
+The protein sequence profiles are bundled with `{protean}` and their location
+can be found with `profile_path()`:
+
+```{r}
+profile_path("TP53")
+```
+
+To import one sequence profile into R use `read_profile()`:
+
+```{r}
+tp53_prof <- read_profile(profile_path("TP53"))
+tp53_prof
+```
+
+The column `ortho_profile_seq` contains the ortholog sequences of the profile. The human sequence is the same across rows and can be found in the column `human_profile_seq`:
+
+```{r}
+tp53_prof[c("ortho_species", "human_profile_seq", "ortho_profile_seq")]
+```
