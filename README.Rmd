@@ -13,12 +13,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# protean
+# protean <img src="man/figures/logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/protean)](https://CRAN.R-project.org/package=protean)
 <!-- badges: end -->
 
-This package contains provides protein sequence profiles for OncoKB cancer
+This package provides protein sequence profiles for OncoKB cancer
 genes.
 
 These sequence profiles can be useful to infer evolutionary variation at protein
@@ -26,6 +27,10 @@ positions which in turn may be used as a proxy for inferring impact of
 mutations.
 
 ## Installation
+
+```r
+install.packages("protean")
+```
 
 You can install the development version of `{protean}` like so:
 

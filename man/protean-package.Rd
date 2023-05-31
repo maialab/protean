@@ -9,7 +9,7 @@
 A data package of sequence profiles of OncoKB genes. These profiles are obtained via Ensembl's REST API and derived from the pairwise alignment of the human sequence with its orthologs.
 }
 \author{
-\strong{Maintainer}: Ramiro Magno \email{ramiro.magno@gmail.com} (\href{https://orcid.org/0000-0001-5226-3441}{ORCID})
+\strong{Maintainer}: Ramiro Magno \email{rmagno@pattern.institute} (\href{https://orcid.org/0000-0001-5226-3441}{ORCID})
 
 Authors:
 \itemize{
