@@ -27,6 +27,10 @@ AGVGD method: https://cran.r-project.org/package=agvgd.
 
 ## Installation
 
+Since `{protean}` is a data package that bundles more than a thousand of
+sequence profiles, its size exceeeds CRAN's limits and hence its installation
+is provided by Pattern Institute's R-Universe repository:
+
 ```r
 install.packages("protean", repos = "https://patterninstitute.r-universe.dev")
 ```

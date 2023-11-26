@@ -17,6 +17,10 @@ if used as input to the AGVGD method:
 
 ## Installation
 
+Since `{protean}` is a data package that bundles more than a thousand of
+sequence profiles, its size exceeeds CRAN’s limits and hence its
+installation is provided by Pattern Institute’s R-Universe repository:
+
 ``` r
 install.packages("protean", repos = "https://patterninstitute.r-universe.dev")
 ```
