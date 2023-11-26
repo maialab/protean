@@ -8,6 +8,14 @@
 \description{
 A data package of sequence profiles of OncoKB genes. These profiles are obtained via Ensembl's REST API and derived from the pairwise alignment of the human sequence with its orthologs.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/maialab/protean}
+  \item Report bugs at \url{https://github.com/maialab/protean/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Ramiro Magno \email{rmagno@pattern.institute} (\href{https://orcid.org/0000-0001-5226-3441}{ORCID})
 
