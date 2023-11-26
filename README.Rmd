@@ -16,27 +16,19 @@ knitr::opts_chunk$set(
 # protean <img src="man/figures/logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/protean)](https://CRAN.R-project.org/package=protean)
+![r-universe](https://patterninstitute.r-universe.dev/badges/protean)
 <!-- badges: end -->
 
-This package provides protein sequence profiles for OncoKB cancer
-genes.
-
-These sequence profiles can be useful to infer evolutionary variation at protein
+This data package provides protein sequence profiles for OncoKB cancer
+genes. These sequence profiles can be useful to infer evolutionary variation at protein
 positions which in turn may be used as a proxy for inferring impact of
-mutations.
+mutations. The data here provided is mostly useful if used as input to the
+AGVGD method: https://cran.r-project.org/package=agvgd.
 
 ## Installation
 
 ```r
-install.packages("protean")
-```
-
-You can install the development version of `{protean}` like so:
-
-``` r
-# install.packages("remotes")
-remotes::install_github("maialab/protean")
+install.packages("protean", repos = "https://patterninstitute.r-universe.dev")
 ```
 
 ## Usage
@@ -50,7 +42,7 @@ library(protean)
 # Number of protein sequence profiles available
 length(exported_genes)
 
-# Here's the first 10
+# Here are the first 10
 exported_genes[1:10]
 ```
 
@@ -68,7 +60,9 @@ tp53_prof <- read_profile(profile_path("TP53"))
 tp53_prof
 ```
 
-The column `ortho_profile_seq` contains the ortholog sequences of the profile. The human sequence is the same across rows and can be found in the column `human_profile_seq`:
+The column `ortho_profile_seq` contains the ortholog sequences of the profile.
+The human sequence is the same across rows and can be found in the column
+`human_profile_seq`:
 
 ```{r}
 tp53_prof[c("ortho_species", "human_profile_seq", "ortho_profile_seq")]

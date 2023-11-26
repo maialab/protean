@@ -4,10 +4,14 @@
 \alias{download_gene_list}
 \title{Download OncoKB Cancer Gene List}
 \usage{
-download_gene_list(path, url = oncokb_dwl_url())
+download_gene_list(
+  path = stop("`path` must be specified"),
+  url = oncokb_dwl_url()
+)
 }
 \arguments{
-\item{path}{A character string with the file path where the downloaded file is to be saved. Tilde-expansion is performed.}
+\item{path}{A character string with the file path where the downloaded file
+is to be saved. Tilde-expansion is performed.}
 
 \item{url}{The URL of the resource providing the OncoKB cancer gene list.}
 }

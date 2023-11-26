@@ -1,7 +1,7 @@
 Package: protean
 Type: Package
 Title: Sequence Profiles of OncoKB Genes
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Ramiro", family = "Magno",
       email = "rmagno@pattern.institute",
@@ -31,6 +31,7 @@ Imports:
     magrittr,
     memoise,
     purrr,
+    readr,
     rlang,
     tibble,
     tidyjson
@@ -38,3 +39,4 @@ Suggests:
     here
 Depends: 
     R (>= 2.10)
+Roxygen: list(markdown = TRUE)
