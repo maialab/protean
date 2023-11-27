@@ -1,4 +1,4 @@
-get_ <- function(resource, ...) {
+get <- function(resource, ...) {
   params <- list(
     ...
   )
@@ -14,5 +14,4 @@ get_ <- function(resource, ...) {
     httr2::req_perform()
 }
 
-get <- memoise::memoise(get_)
 

@@ -36,7 +36,8 @@ get_alignments_ <- function(symbol) {
       human_align_seq = character(),
       ortho_align_seq = character(),
       human_ortho_perc_id = character(),
-      ortho_human_perc_id = character()
+      ortho_human_perc_id = character(),
+      cigar = character()
     )
   } else {
     tbl2 <-
@@ -51,7 +52,8 @@ get_alignments_ <- function(symbol) {
         human_align_seq = .data$source.align_seq,
         ortho_align_seq = .data$target.align_seq,
         human_ortho_perc_id = .data$source.perc_id,
-        ortho_human_perc_id = .data$target.perc_id
+        ortho_human_perc_id = .data$target.perc_id,
+        cigar = .data$target.cigar_line
       )
   }
   }

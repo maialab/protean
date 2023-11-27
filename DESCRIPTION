@@ -1,7 +1,7 @@
 Package: protean
 Type: Package
 Title: Sequence Profiles of OncoKB Genes
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person(given = "Ramiro", family = "Magno",
       email = "rmagno@pattern.institute",
